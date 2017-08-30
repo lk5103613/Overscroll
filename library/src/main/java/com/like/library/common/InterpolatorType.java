@@ -6,7 +6,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 
-public class BouncingInterpolatorType {
+public class InterpolatorType {
 
     public static final int OVERSHOOT_INTERPOLATOR = 1;
     public static final int BOUNCE_INTERPOLATOR = 2;

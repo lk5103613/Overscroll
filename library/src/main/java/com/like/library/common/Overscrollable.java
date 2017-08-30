@@ -1,6 +1,6 @@
 package com.like.library.common;
 
-public interface Bounceable {
+public interface Overscrollable {
 
     /**
      * 用于判断是否在控件最顶端
@@ -15,5 +15,9 @@ public interface Bounceable {
      * @return
      */
     boolean isBottom();
+
+    int getWidth();
+
+    int getHeight();
 
 }

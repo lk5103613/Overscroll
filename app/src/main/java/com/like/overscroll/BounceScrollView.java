@@ -8,7 +8,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
-import com.like.library.common.BouncingInterpolatorType;
+import com.like.library.common.InterpolatorType;
 import com.like.library.utils.ScreenUtils;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.view.ViewHelper;
@@ -48,9 +48,9 @@ public class BounceScrollView extends ScrollView {
         if (attrs != null) {
             TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Overscroll);
             //差值器
-            mTimeInterpolator = BouncingInterpolatorType.getTimeInterpolator(typedArray.getInteger(
+            mTimeInterpolator = InterpolatorType.getTimeInterpolator(typedArray.getInteger(
                     R.styleable.Overscroll_BouncingInterpolator
-                    , BouncingInterpolatorType.OVERSHOOT_INTERPOLATOR));
+                    , InterpolatorType.OVERSHOOT_INTERPOLATOR));
             //回弹速度
             mBouncingTopDuration = typedArray.getInteger(R.styleable.Overscroll_BouncingTopDuration, mBouncingTopDuration);
             mBouncingBottomDuration = typedArray.getInteger(R.styleable.Overscroll_BouncingBottomDuration, mBouncingBottomDuration);
@@ -58,7 +58,7 @@ public class BounceScrollView extends ScrollView {
             mBouncingType = typedArray.getInt(R.styleable.Overscroll_BouncingType, BouncingType.TOP);
             typedArray.recycle();
             //获取是差值  整个屏幕的三倍大小
-            mOffsetScale = ScreenUtils.getScreenHeight(getContext()) * 3;
+//            mOffsetScale = ScreenUtils.getScreenHeight(getContext()) * 3;
         }
 
     }

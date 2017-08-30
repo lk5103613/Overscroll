@@ -1,4 +1,4 @@
 package com.like.library.common;
 
-public class BounceHelper {
+public class OverscrollHelper {
 }
